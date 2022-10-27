@@ -1,5 +1,6 @@
 import pytest
 from selenium import webdriver
+from pages.web_page import SearchHelper
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
@@ -14,3 +15,9 @@ def browser():
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
     yield driver
     driver.quit()
+
+
+@pytest.fixture(scope="session")
+def hh_page():
+    hh_page = SearchHelper(browser)
+    yield hh_page
