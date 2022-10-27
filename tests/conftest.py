@@ -18,6 +18,6 @@ def browser():
 
 
 @pytest.fixture(scope="session")
-def hh_page():
+def hh_page(browser):
     hh_page = SearchHelper(browser)
     yield hh_page
