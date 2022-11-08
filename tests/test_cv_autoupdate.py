@@ -23,5 +23,4 @@ class TestCvAutoupdate:
 
             hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_LOGINSUBMIT_BUTTON)
 
-            hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_MYRESUMES_LINK)
             hh_page.click_on_buttons(HeadHunterLocators.LOCATOR_HH_RESUMEUPDATE_BUTTON)

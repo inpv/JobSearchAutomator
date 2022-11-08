@@ -11,5 +11,4 @@ class HeadHunterLocators:
     LOCATOR_HH_PASSWORDINPUT_FIELD = (By.CSS_SELECTOR, "input[data-qa='login-input-password']")
     LOCATOR_HH_LOGINSUBMIT_BUTTON = (By.CSS_SELECTOR, "button[data-qa='account-login-submit']")
     LOCATOR_HH_NOTIFICATIONCLOSE_BUTTON = (By.CSS_SELECTOR, "div[data-qa='notification-close-button']")
-    LOCATOR_HH_MYRESUMES_LINK = (By.CLASS_NAME, "supernova-link")
     LOCATOR_HH_RESUMEUPDATE_BUTTON = (By.CSS_SELECTOR, "button[data-qa='resume-update-button_actions']")
