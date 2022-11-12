@@ -18,9 +18,6 @@ class TestCvAutoupdate:
             with allure.step('Confirm your city'):
                 hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_ALLCORRECT_BUTTON)
 
-            with allure.step('Click login button'):
-                hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_LOGIN_LINK)
-
             with allure.step('Choose registration by login instead of phone number'):
                 hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_BYPASSWORD_BUTTON)
 
