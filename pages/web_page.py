@@ -11,9 +11,10 @@ class SearchHelper(BasePage):
     def click_on_button(self, locator):
         return self.find_element(locator, time=60).click()
 
-    def click_on_buttons(self, locator):
+    def click_on_buttons_if_text_found(self, locator):
         for btn in self.find_elements(locator, time=60):
-            btn.click()
+            if btn.text == "Поднять в поиске":
+                btn.click()
 
     def click_on_element_if_appeared(self, locator):
         element = self.find_element_or_ignore(locator, time=60)

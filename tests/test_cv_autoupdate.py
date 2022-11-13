@@ -34,4 +34,4 @@ class TestCvAutoupdate:
                 hh_page.click_on_element_if_appeared(HeadHunterLocators.LOCATOR_HH_NOTIFICATIONCLOSE_BUTTON)
 
             with allure.step('Click all update buttons'):
-                hh_page.click_on_buttons(HeadHunterLocators.LOCATOR_HH_RESUMEUPDATE_BUTTON)
+                hh_page.click_on_buttons_if_text_found(HeadHunterLocators.LOCATOR_HH_RESUMEUPDATE_BUTTON)
