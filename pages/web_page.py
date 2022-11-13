@@ -14,3 +14,8 @@ class SearchHelper(BasePage):
     def click_on_buttons(self, locator):
         for btn in self.find_elements(locator, time=60):
             btn.click()
+
+    def click_on_element_if_appeared(self, locator):
+        element = self.find_element_or_ignore(locator, time=60)
+        if element is not None:
+            element.click()

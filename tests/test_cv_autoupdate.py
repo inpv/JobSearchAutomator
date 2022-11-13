@@ -30,5 +30,8 @@ class TestCvAutoupdate:
             with allure.step('Submit login and password data'):
                 hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_LOGINSUBMIT_BUTTON)
 
+            with allure.step('Close unwanted notification popups'):
+                hh_page.click_on_element_if_appeared(HeadHunterLocators.LOCATOR_HH_NOTIFICATIONCLOSE_BUTTON)
+
             with allure.step('Click all update buttons'):
                 hh_page.click_on_buttons(HeadHunterLocators.LOCATOR_HH_RESUMEUPDATE_BUTTON)
