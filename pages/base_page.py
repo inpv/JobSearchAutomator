@@ -8,15 +8,15 @@ class BasePage:
     def __init__(self, driver):
         self.driver = driver
 
-    def find_element(self, locator, time=60):
+    def find_element(self, locator, time):
         return WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
                                                       message=f"Can't find element by locator {locator}")
 
-    def find_elements(self, locator, time=60):
+    def find_elements(self, locator, time):
         return WebDriverWait(self.driver, time).until(EC.presence_of_all_elements_located(locator),
                                                       message=f"Can't find elements by locator {locator}")
 
-    def find_element_or_ignore(self, locator, time=60):
+    def find_element_or_ignore(self, locator, time):
         try:
             return WebDriverWait(self.driver, time).until(EC.presence_of_all_elements_located(locator),
                                                           message=f"Can't find elements by locator {locator}")
