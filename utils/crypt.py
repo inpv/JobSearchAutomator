@@ -6,8 +6,11 @@ from datas.strings import Strings
 class Crypt:
 
     @staticmethod
-    def decipher(text, key):
-        shift = 26 - (key + 1)  # shifting the symbols
+    def caesar_cipher(text, key, decipher: bool):
+        if decipher:
+            shift = 26 - (key + 1)  # shifting the symbols
+        else:
+            shift = key
 
         alpha_lower = string.ascii_lowercase  # loading lowercase letters
         alpha_upper = string.ascii_uppercase  # loading uppercase letters
@@ -26,9 +29,16 @@ class Crypt:
         return decoded_text
 
     @staticmethod
+    def encrypt(passwd):
+        # use it to generate the shifted password list
+        for num in range(1, 25):
+            new_pass = Crypt.caesar_cipher(text=passwd, key=num, decipher=False)
+            print(new_pass)
+
+    @staticmethod
     def get_random_decrypted_pass():
         passwd = random.choice(Strings.strings)
         pass_index = Strings.strings.index(passwd)
-        final_pass = Crypt.decipher(passwd, pass_index)
+        final_pass = Crypt.caesar_cipher(passwd, pass_index, decipher=True)
 
         return final_pass
