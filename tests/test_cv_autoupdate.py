@@ -38,4 +38,4 @@ class TestCvAutoupdate:
 
             with allure.step('Click all update buttons'):
                 hh_page.click_on_buttons_if_text_found(HeadHunterLocators.LOCATOR_HH_RESUMEUPDATE_BUTTON,
-                                                       "Поднять в поиске")
+                                                       HeadHunterLocators.LOCATOR_HH_RESUMEUPDATE_BUTTONTEXT)
