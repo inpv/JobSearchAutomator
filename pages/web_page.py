@@ -17,7 +17,8 @@ class SearchHelper(BasePage):
             if btn.text == text:
                 btn.click()
 
-    def click_on_element_if_appeared(self, locator):
-        element = self.find_element_or_ignore(locator, time=ConnectionDatas.MAX_WAIT_VALUE)
-        if element is not None:
-            element.click()
+    def click_on_elements_if_appeared(self, locator):
+        elements = self.find_elements_or_ignore(locator, time=ConnectionDatas.MAX_WAIT_VALUE)
+        if elements is not None:
+            for element in elements:
+                element.click()

@@ -31,10 +31,10 @@ class TestCvAutoupdate:
                 hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_LOGINSUBMIT_BUTTON)
 
             with allure.step('Close unwanted employer review popups'):
-                hh_page.click_on_element_if_appeared(HeadHunterLocators.LOCATOR_HH_EMPLOYER_REVIEW_CLOSE_BUTTON)
+                hh_page.click_on_elements_if_appeared(HeadHunterLocators.LOCATOR_HH_EMPLOYER_REVIEW_CLOSE_BUTTON)
 
             with allure.step('Close unwanted service review popups'):
-                hh_page.click_on_element_if_appeared(HeadHunterLocators.LOCATOR_HH_SERVICE_REVIEW_CLOSE_BUTTON)
+                hh_page.click_on_elements_if_appeared(HeadHunterLocators.LOCATOR_HH_SERVICE_REVIEW_CLOSE_BUTTON)
 
             with allure.step('Click all update buttons'):
                 hh_page.click_on_buttons_if_text_found(HeadHunterLocators.LOCATOR_HH_RESUMEUPDATE_BUTTON,
