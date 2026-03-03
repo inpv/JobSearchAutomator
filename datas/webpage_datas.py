@@ -15,3 +15,4 @@ class HeadHunterLocators:
     LOCATOR_HH_SERVICE_REVIEW_CLOSE_BUTTON = (By.CLASS_NAME, "uxs-1h3RIxayGx")
     LOCATOR_HH_RESUMEUPDATE_BUTTON = (By.CSS_SELECTOR, "span[data-qa='resume-update-button-text']")
     LOCATOR_HH_RESUMEUPDATE_BUTTONTEXT = "Поднять в поиске"
+    LOCATOR_HH_ALLCLEAR_BUTTON = (By.XPATH, "//div[@data-qa='actions-container']//button[.//span[text()='Понятно']]")
