@@ -12,9 +12,9 @@ class Main:
 
     def __init__(self):
         chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument('--no-sandbox')
-        chrome_options.add_argument('--disable-dev-shm-usage')
+        #chrome_options.add_argument("--headless")
+        #chrome_options.add_argument('--no-sandbox')
+        #chrome_options.add_argument('--disable-dev-shm-usage')
         chrome_options.add_argument('--disable-notifications') # may help with unwanted popups
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
 
@@ -25,10 +25,12 @@ class Main:
 
                     hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_ALLCORRECT_BUTTON)
 
-                    hh_page.enter_word_into_input(HeadHunterLocators.LOCATOR_HH_LOGININPUT_FIELD,
-                                                  LoginDatas.LOGIN_ENCODED_STR)
+                    hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_WITHEMAIL_FIELD)
 
                     hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_BYPASSWORD_BUTTON)
+
+                    hh_page.enter_word_into_input(HeadHunterLocators.LOCATOR_HH_LOGININPUT_FIELD,
+                                                  LoginDatas.LOGIN_ENCODED_STR)
 
                     hh_page.enter_word_into_input(HeadHunterLocators.LOCATOR_HH_PASSWORDINPUT_FIELD,
                                                   LoginDatas.LOGIN_PWD)
