@@ -25,7 +25,7 @@ class Main:
 
                     hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_ALLCORRECT_BUTTON)
 
-                    hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_WITHEMAIL_FIELD)
+                    hh_page.js_click(HeadHunterLocators.LOCATOR_HH_WITHEMAIL_FIELD)
 
                     hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_BYPASSWORD_BUTTON)
 

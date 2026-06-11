@@ -22,3 +22,7 @@ class SearchHelper(BasePage):
         if elements is not None:
             for element in elements:
                 element.click()
+
+    def js_click(self, locator):
+        element = self.find_element(locator, time=ConnectionDatas.MAX_WAIT_VALUE)
+        self.driver.execute_script("arguments[0].click();", element)
