@@ -23,7 +23,7 @@ class Main:
             for page in ConnectionDatas.PAGE_ADDRESSES:
                     hh_page.go_to_page(page)
 
-                    hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_ALLCORRECT_BUTTON)
+                    hh_page.click_on_elements_if_appeared(HeadHunterLocators.LOCATOR_HH_ALLCORRECT_BUTTON)
 
                     hh_page.js_click(HeadHunterLocators.LOCATOR_HH_WITHEMAIL_FIELD)
 
