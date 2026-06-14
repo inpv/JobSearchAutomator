@@ -27,10 +27,10 @@ class Main:
 
                     hh_page.js_click(HeadHunterLocators.LOCATOR_HH_WITHEMAIL_FIELD)
 
-                    hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_BYPASSWORD_BUTTON)
-
                     hh_page.enter_word_into_input(HeadHunterLocators.LOCATOR_HH_LOGININPUT_FIELD,
                                                   LoginDatas.LOGIN_ENCODED_STR)
+
+                    hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_BYPASSWORD_BUTTON)
 
                     hh_page.enter_word_into_input(HeadHunterLocators.LOCATOR_HH_PASSWORDINPUT_FIELD,
                                                   LoginDatas.LOGIN_PWD)
