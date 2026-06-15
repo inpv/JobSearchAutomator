@@ -9,7 +9,7 @@ class HeadHunterLocators:
     LOCATOR_HH_WITHEMAIL_FIELD = (By.CSS_SELECTOR, "input[data-qa='credential-type-EMAIL']")
     LOCATOR_HH_BYPASSWORD_BUTTON = (By.CSS_SELECTOR, "button[data-qa='expand-login-by-password']")
     LOCATOR_HH_LOGININPUT_FIELD = (By.CSS_SELECTOR, "input[data-qa='applicant-login-input-email']")
-    LOCATOR_HH_PASSWORDINPUT_FIELD = (By.CSS_SELECTOR, "input[data-qa='login-input-password']")
+    LOCATOR_HH_PASSWORDINPUT_FIELD = (By.CSS_SELECTOR, "input[data-qa='applicant-login-input-password']")
     LOCATOR_HH_LOGINSUBMIT_BUTTON = (By.CSS_SELECTOR, "button[data-qa='account-login-submit']")
     LOCATOR_HH_CAPTCHA_FIELD = (By.CSS_SELECTOR, "input[data-qa='account-captcha-input']")
     LOCATOR_HH_EMPLOYER_REVIEW_CLOSE_BUTTON = (By.CSS_SELECTOR, "div[data-qa='notification-close-button']")
