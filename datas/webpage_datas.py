@@ -12,6 +12,7 @@ class HeadHunterLocators:
     LOCATOR_HH_PASSWORDINPUT_FIELD = (By.CSS_SELECTOR, "input[data-qa='applicant-login-input-password']")
     LOCATOR_HH_LOGINSUBMIT_BUTTON = (By.CSS_SELECTOR, "button[data-qa='submit-button']")
     LOCATOR_HH_CAPTCHA_FIELD = (By.CSS_SELECTOR, "input[data-qa='account-captcha-input']")
+    LOCATOR_HH_CAPTCHA_IMAGE = (By.CSS_SELECTOR, "img[data-qa='account-captcha-picture']")
     LOCATOR_HH_EMPLOYER_REVIEW_CLOSE_BUTTON = (By.CSS_SELECTOR, "div[data-qa='notification-close-button']")
     LOCATOR_HH_SERVICE_REVIEW_CLOSE_BUTTON = (By.CLASS_NAME, "uxs-1h3RIxayGx")
     LOCATOR_HH_RESUMEUPDATE_BUTTON = (By.CSS_SELECTOR, "span[data-qa='resume-update-button-text']")

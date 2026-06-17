@@ -21,29 +21,30 @@ class Main:
         try:
             hh_page = SearchHelper(driver)
             for page in ConnectionDatas.PAGE_ADDRESSES:
-                    hh_page.go_to_page(page)
+                hh_page.go_to_page(page)
 
-                    hh_page.click_on_elements_if_appeared(HeadHunterLocators.LOCATOR_HH_ALLCORRECT_BUTTON)
+                hh_page.click_on_elements_if_appeared(HeadHunterLocators.LOCATOR_HH_ALLCORRECT_BUTTON)
 
-                    hh_page.js_click(HeadHunterLocators.LOCATOR_HH_WITHEMAIL_FIELD)
+                hh_page.js_click(HeadHunterLocators.LOCATOR_HH_WITHEMAIL_FIELD)
 
-                    hh_page.enter_word_into_input(HeadHunterLocators.LOCATOR_HH_LOGININPUT_FIELD,
-                                                  LoginDatas.LOGIN_ENCODED_STR)
+                hh_page.enter_word_into_input(HeadHunterLocators.LOCATOR_HH_LOGININPUT_FIELD,
+                                              LoginDatas.LOGIN_ENCODED_STR)
 
-                    hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_BYPASSWORD_BUTTON)
+                hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_BYPASSWORD_BUTTON)
 
-                    hh_page.enter_word_into_input(HeadHunterLocators.LOCATOR_HH_PASSWORDINPUT_FIELD,
-                                                  LoginDatas.LOGIN_PWD)
-                    hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_LOGINSUBMIT_BUTTON)
+                hh_page.enter_word_into_input(HeadHunterLocators.LOCATOR_HH_PASSWORDINPUT_FIELD,
+                                              LoginDatas.LOGIN_PWD)
 
-                    hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_ALLCLEAR_BUTTON)
+                hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_LOGINSUBMIT_BUTTON)
 
-                    hh_page.click_on_elements_if_appeared(HeadHunterLocators.LOCATOR_HH_EMPLOYER_REVIEW_CLOSE_BUTTON)
+                hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_ALLCLEAR_BUTTON)
 
-                    hh_page.click_on_elements_if_appeared(HeadHunterLocators.LOCATOR_HH_SERVICE_REVIEW_CLOSE_BUTTON)
+                hh_page.click_on_elements_if_appeared(HeadHunterLocators.LOCATOR_HH_EMPLOYER_REVIEW_CLOSE_BUTTON)
 
-                    hh_page.click_on_buttons_if_text_found(HeadHunterLocators.LOCATOR_HH_RESUMEUPDATE_BUTTON,
-                                                           HeadHunterLocators.LOCATOR_HH_RESUMEUPDATE_BUTTONTEXT)
+                hh_page.click_on_elements_if_appeared(HeadHunterLocators.LOCATOR_HH_SERVICE_REVIEW_CLOSE_BUTTON)
+
+                hh_page.click_on_buttons_if_text_found(HeadHunterLocators.LOCATOR_HH_RESUMEUPDATE_BUTTON,
+                                                       HeadHunterLocators.LOCATOR_HH_RESUMEUPDATE_BUTTONTEXT)
         finally:
             driver.quit()
 
