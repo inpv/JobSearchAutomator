@@ -1,6 +1,6 @@
 from pages.base_page import BasePage
 from datas.connection_datas import ConnectionDatas
-
+from utils.image_saver import ImageSaver
 
 class SearchHelper(BasePage):
 
@@ -26,3 +26,8 @@ class SearchHelper(BasePage):
     def js_click(self, locator):
         element = self.find_element(locator, time=ConnectionDatas.MAX_WAIT_VALUE)
         self.driver.execute_script("arguments[0].click();", element)
+
+    def save_captcha_image(self, locator, output_dir="screenshots"):
+        element = self.find_element(locator, time=ConnectionDatas.MAX_WAIT_VALUE)
+        self.wait_until_image_loaded(element, time=ConnectionDatas.MAX_WAIT_VALUE)
+        return ImageSaver.save_screenshot_of_element(element, output_dir=output_dir)

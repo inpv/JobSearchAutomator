@@ -25,3 +25,15 @@ class BasePage:
 
     def go_to_page(self, page):
         return self.driver.get(page)
+
+    def wait_until_image_loaded(self, element, time):
+        def _image_is_loaded(_):
+            return self.driver.execute_script(
+                "return arguments[0].complete && arguments[0].naturalWidth > 0;",
+                element
+            )
+
+        return WebDriverWait(self.driver, time).until(
+            _image_is_loaded,
+            message=f"Image never finished loading"
+        )
