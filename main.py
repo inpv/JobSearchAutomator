@@ -37,7 +37,8 @@ class Main:
 
                 hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_LOGINSUBMIT_BUTTON)
 
-                hh_page.save_captcha_image(HeadHunterLocators.LOCATOR_HH_CAPTCHA_IMAGE)
+                hh_page.enter_word_into_input(HeadHunterLocators.LOCATOR_HH_CAPTCHA_FIELD,
+                                              hh_page.solve_captcha_image(HeadHunterLocators.LOCATOR_HH_CAPTCHA_IMAGE))
 
                 hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_ALLCLEAR_BUTTON)
 

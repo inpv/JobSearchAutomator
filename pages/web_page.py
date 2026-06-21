@@ -1,6 +1,6 @@
 from pages.base_page import BasePage
 from datas.connection_datas import ConnectionDatas
-from utils.image_handler import ImageHandler
+from utils.image_solver import ImageSolver
 
 class SearchHelper(BasePage):
 
@@ -27,7 +27,7 @@ class SearchHelper(BasePage):
         element = self.find_element(locator, time=ConnectionDatas.MAX_WAIT_VALUE)
         self.driver.execute_script("arguments[0].click();", element)
 
-    def save_captcha_image(self, locator):
+    def solve_captcha_image(self, locator):
         element = self.find_element(locator, time=ConnectionDatas.MAX_WAIT_VALUE)
         self.wait_until_image_loaded(element, time=ConnectionDatas.MAX_WAIT_VALUE)
-        return ImageHandler.save_preprocessed_captcha(element)
+        return ImageSolver.solve_captcha(element)
