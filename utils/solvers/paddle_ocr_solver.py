@@ -5,7 +5,6 @@ from utils.ocr_result import OCRResult
 class PaddleOCRSolver:
 
     _ocr = PaddleOCR(
-        lang="ru",
         text_recognition_model_name="eslav_PP-OCRv5_mobile_rec",
         use_textline_orientation=True,
         device="cpu",
@@ -22,10 +21,6 @@ class PaddleOCRSolver:
 
         texts = []
         confidences = []
-
-        # Debug
-        print("Raw result type:", type(result))
-        print("Raw result:", result)
 
         for page_result in result:
             if isinstance(page_result, dict):

@@ -6,3 +6,4 @@ class OCRResult:
     text: str
     confidence: float
     solver: str
+    elapsed_ms: float = 0.0
