@@ -30,6 +30,9 @@ class ImageSolver:
             if result:
                 results.append(result)
 
+        # Debug
+        print(results)
+
         best = OCRResultEvaluator.choose_best(results)
 
         if best:
