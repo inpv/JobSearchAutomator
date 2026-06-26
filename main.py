@@ -40,12 +40,6 @@ class Main:
                 hh_page.enter_word_into_input(HeadHunterLocators.LOCATOR_HH_CAPTCHA_FIELD,
                                               hh_page.solve_captcha_image(HeadHunterLocators.LOCATOR_HH_CAPTCHA_IMAGE))
 
-                hh_page.click_on_button(HeadHunterLocators.LOCATOR_HH_ALLCLEAR_BUTTON)
-
-                hh_page.click_on_elements_if_appeared(HeadHunterLocators.LOCATOR_HH_EMPLOYER_REVIEW_CLOSE_BUTTON)
-
-                hh_page.click_on_elements_if_appeared(HeadHunterLocators.LOCATOR_HH_SERVICE_REVIEW_CLOSE_BUTTON)
-
                 hh_page.click_on_buttons_if_text_found(HeadHunterLocators.LOCATOR_HH_RESUMEUPDATE_BUTTON,
                                                        HeadHunterLocators.LOCATOR_HH_RESUMEUPDATE_BUTTONTEXT)
         finally:
