@@ -40,6 +40,8 @@ class Main:
                 hh_page.enter_word_into_input(HeadHunterLocators.LOCATOR_HH_CAPTCHA_FIELD,
                                               hh_page.solve_captcha_image(HeadHunterLocators.LOCATOR_HH_CAPTCHA_IMAGE))
 
+                hh_page.js_click(HeadHunterLocators.LOCATOR_HH_CAPTCHA_SUBMIT_BUTTON)
+
                 hh_page.click_on_buttons_if_text_found(HeadHunterLocators.LOCATOR_HH_RESUMEUPDATE_BUTTON,
                                                        HeadHunterLocators.LOCATOR_HH_RESUMEUPDATE_BUTTONTEXT)
         finally:
