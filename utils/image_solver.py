@@ -18,9 +18,7 @@ class ImageSolver:
         results = []
 
         solvers = [
-            PaddleOCRSolver(),
             EasyOCRSolver(),
-            TesseractOCRSolver(),
         ]
 
         for solver in solvers:
