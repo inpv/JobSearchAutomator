@@ -9,10 +9,13 @@ class EasyOCRSolver:
         gpu=False
     )
 
+    _ALLOWLIST = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя "
+
     @classmethod
     def solve(cls, image_path):
 
-        result = cls._reader.readtext(image_path)
+        result = cls._reader.readtext(image_path,
+                                      allowlist=cls._ALLOWLIST)
 
         if not result:
             return None
