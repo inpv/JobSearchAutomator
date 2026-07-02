@@ -31,3 +31,6 @@ class SearchHelper(BasePage):
         element = self.find_element(locator, time=ConnectionDatas.MAX_WAIT_VALUE)
         self.wait_until_image_loaded(element, time=ConnectionDatas.MAX_WAIT_VALUE)
         return ImageSolver.solve_captcha(element)
+
+    def is_element_present(self, locator):
+        return bool(self.find_elements_or_ignore(locator, time=ConnectionDatas.MAX_WAIT_VALUE))
