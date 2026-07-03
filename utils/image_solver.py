@@ -1,6 +1,8 @@
 from utils.image_handler import ImageHandler
 from utils.ocr_result_evaluator import OCRResultEvaluator
 from utils.solvers.easy_ocr_solver import EasyOCRSolver
+from utils.solvers.paddle_ocr_solver import PaddleOCRSolver
+from utils.solvers.tesseract_ocr_solver import TesseractOCRSolver
 
 
 class ImageSolver:
@@ -17,6 +19,8 @@ class ImageSolver:
 
         solvers = [
             EasyOCRSolver(),
+            PaddleOCRSolver(),
+            TesseractOCRSolver(),
         ]
 
         for solver in solvers:
